@@ -39,8 +39,15 @@ public class Advanced {
 
         String normalizedLastName = lastName.substring(0, 1).toUpperCase() + lastName.substring(1).toLowerCase();
 
-        String fullName = normalizedFirstName + " " + normalizedLastName;
+        String fullName;
 
+        if(normalizedLastName.equals(" "))
+        {
+            fullName = normalizedFirstName;
+        }
+        else {
+            fullName = normalizedFirstName + " " + normalizedLastName;
+        }
         return fullName;
     }
 
